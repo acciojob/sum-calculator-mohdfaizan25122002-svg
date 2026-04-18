@@ -3,18 +3,19 @@ import React,{useState} from "react";
 
 
 const App = () => {
-  let [sum,setSum]=useState(0);
-  function suminside(e){
-        let number =  e.target.value;
-          setSum(prev => prev + number);
+  let [sum, setSum]= useState(0);
+
+  function sumInside(e){
+        let number =+e.target.value;
+          setSum(+sum + +number);
 
         }
   return (
     <div>
         {/* Do not remove the main div */}
         <h1>Sum Calculator</h1>
-        <input type="number" onChange={suminside} />
-        <p>Sum: {sum}</p>
+        <input type="number" onChange={sumInside} />
+        <p>Sum:{sum}</p>
     </div>
   )
 }
