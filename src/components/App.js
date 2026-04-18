@@ -6,7 +6,7 @@ const App = () => {
   let [sum,setSum]=useState(0);
   function suminside(e){
         let number =+e.target.value;
-          setSum(sum + number);
+          setSum(prev => prev + number);
 
         }
   return (
