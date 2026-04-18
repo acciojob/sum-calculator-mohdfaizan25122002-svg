@@ -7,7 +7,7 @@ const App = () => {
 
   function sumInside(e){
         let number =+e.target.value;
-          setSum(+sum + +number);
+          setSum(sum+number);
 
         }
   return (
@@ -15,7 +15,7 @@ const App = () => {
         {/* Do not remove the main div */}
         <h1>Sum Calculator</h1>
         <input type="number" onChange={sumInside} />
-        <p>Sum:{sum}</p>
+        <p>{sum}</p>
     </div>
   )
 }
